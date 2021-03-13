@@ -33,3 +33,18 @@ def callback():
 tk.Button(text='Quit', command=callback).pack(fill=tk.X) 
 tk.Button(text='Answer', command=answer).pack(fill=tk.X)
 tk.mainloop()
+
+#-----------------------------------------------------------------------------------------
+# To open file
+
+import tkinter as tk
+from tkinter import filedialog as fd 
+
+def callback():
+    name= fd.askopenfilename() 
+    print(name)
+    
+errmsg = 'Error!'
+tk.Button(text='File Open', 
+       command=callback).pack(fill=tk.X)
+tk.mainloop()
